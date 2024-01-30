@@ -1,0 +1,45 @@
+{
+  "tiles": [
+    {
+      "id": 1,
+      "text": "Styles",
+      "link": "https://www.seznam.cz",
+      "bgColor": "#6d6dff"
+    },
+    {
+      "id": 2,
+      "text": "Print Templates",
+      "link": "https://www.google.cz",
+      "imageUrl": "rectangle-2.png"
+    },
+    { "id": 3, "text": "Colors", "link": "https://www.seznam.cz" },
+    {
+      "id": 4,
+      "text": "Photos",
+      "link": "https://www.seznam.cz",
+      "bgColor": "#9653fe",
+      "imageUrl": "rectangle-3.png"
+    },
+    {
+      "id": 5,
+      "text": "Videos",
+      "link": "https://www.seznam.cz",
+      "bgColor": "#9653fe",
+      "imageUrl": "rectangle-5.png"
+    },
+    {
+      "id": 6,
+      "text": "Shop",
+      "link": "https://www.seznam.cz",
+      "bgColor": "#507fff",
+      "imageUrl": "rectangle-4.png"
+    },
+    {
+      "id": 7,
+      "text": "Item",
+      "link": "https://www.seznam.cz",
+      "bgColor": "#507fff",
+      "imageUrl": "rectangle-1.png"
+    }
+  ]
+}

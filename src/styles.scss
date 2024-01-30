@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+// Imports
+@use "./app/styles/variables.scss" as *;
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //debug overflow
+  //outline: 1px solid red;
+  //overflow-x: auto;
+  //overflow-x: hidden;
+}
+
+.container {
+  width: min(1200px, 100% - 4rem);
+  margin-inline: auto;
+  margin-top: 100px;
+}
+
+.hidden {
+  visibility: hidden;
+}

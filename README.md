@@ -1,14 +1,14 @@
-# PapirflyAssignment
+# Papirfly FrontEnd Assignment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Code scaffolding
+## Local server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This app needs Local server (json-server) running for all features. Run `npm run server` for server start. Local server runs on `http://localhost:3000/`.
 
 ## Build
 
@@ -22,6 +22,24 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Assignment
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Hlavní požadavky
+
+- Nakódovat komponentu dle designu 1:1, ted dlaždice, které jsou jako linky a
+  nastavení, které je skryto a otevírá se jako dialogové okno (modal)
+- [Check] Použít jakýkoliv preprocesor pro kompilaci stylů z SASS/SCSS do CSS
+- Responsivní chování dlaždic (ne nastavení – modal) v rozmezí 320px až 1920px
+  šířky obrazovky
+- Po kliknutí na „Update“ v nastavení odeslat aktuálně nastavená data pomocí POST
+  requestu (může být i na neexistující adresu, není potřeba response).
+
+### Volitelný úkol
+
+- Při načtení stránky dynamicky načíst dlaždice např. dle JSONu a GET requestu na
+  něj
+- Reflektovat aspoň některá nastavení ve view ( v dlaždicích ), jako třeba text, link,
+  title, subtitle, barvu pozadí, atd…
+- Responsivní chování modalu nastavení
+- Jednoduché animace (reveal, on hover, text, atd..)
+- Drag and drop přesouvání pozice dlaždic v nastavení
