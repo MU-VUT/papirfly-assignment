@@ -1,0 +1,63 @@
+@use "@angular/material" as mat;
+
+@use "./app/styles/variables.scss" as *;
+
+@include mat.core();
+
+$papirfly-palette: (
+  50: #e8efff,
+  100: #c6d8ff,
+  200: #a0beff,
+  300: #79a3ff,
+  400: #5d90ff,
+  500: #407cff,
+  600: #3a74ff,
+  700: #3269ff,
+  800: #2a5fff,
+  900: #1c4cff,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #cdd6ff,
+  A700: #b3c1ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$primary: mat.define-palette($papirfly-palette);
+$accent: mat.define-palette(mat.$pink-palette);
+$warn: mat.define-palette(mat.$red-palette);
+
+$typography: mat.define-typography-config(
+  $font-family: $fontSecondary,
+  $body-1:
+    mat.define-typography-level(
+      $font-size: 13px,
+    ),
+);
+
+$theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+    ),
+    typography: $typography,
+  )
+);
+
+@include mat.all-component-themes($theme);

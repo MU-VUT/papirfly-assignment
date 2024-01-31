@@ -23,6 +23,7 @@
 }
 
 // Custom display grid
+// For reusability @function/@mixin can be used
 .grid-item-half {
   @include mqmin(large) {
     &:nth-of-type(6n) {

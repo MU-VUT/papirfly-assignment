@@ -1,0 +1,9 @@
+@use "../../styles/variables.scss" as *;
+
+.dialog {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  font-family: $fontSecondary;
+  font-weight: 400;
+}

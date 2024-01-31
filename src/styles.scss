@@ -1,5 +1,5 @@
-// Imports
 @use "./app/styles/variables.scss" as *;
+@use "./app/styles/buttons.scss" as *;
 
 // Global styles
 * {
@@ -16,8 +16,17 @@
   width: min(1200px, 100% - 4rem);
   margin-inline: auto;
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .hidden {
   visibility: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
 }

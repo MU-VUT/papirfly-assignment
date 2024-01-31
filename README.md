@@ -24,19 +24,21 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Assignment
 
+https://app.zeplin.io/project/5abcb99f6ae5e3121e2eec13/screen/601bf9f8a886787d02d3fffe
+
 ### Hlavní požadavky
 
 - Nakódovat komponentu dle designu 1:1, ted dlaždice, které jsou jako linky a
   nastavení, které je skryto a otevírá se jako dialogové okno (modal)
 - [Check] Použít jakýkoliv preprocesor pro kompilaci stylů z SASS/SCSS do CSS
-- Responsivní chování dlaždic (ne nastavení – modal) v rozmezí 320px až 1920px
+- [Check] Responsivní chování dlaždic (ne nastavení – modal) v rozmezí 320px až 1920px
   šířky obrazovky
 - Po kliknutí na „Update“ v nastavení odeslat aktuálně nastavená data pomocí POST
   requestu (může být i na neexistující adresu, není potřeba response).
 
 ### Volitelný úkol
 
-- Při načtení stránky dynamicky načíst dlaždice např. dle JSONu a GET requestu na
+- [Check] Při načtení stránky dynamicky načíst dlaždice např. dle JSONu a GET requestu na
   něj
 - Reflektovat aspoň některá nastavení ve view ( v dlaždicích ), jako třeba text, link,
   title, subtitle, barvu pozadí, atd…

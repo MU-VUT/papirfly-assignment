@@ -1,0 +1,100 @@
+@use "../../styles/variables.scss" as *;
+@use "@angular/material" as mat;
+
+.dialog-tabs {
+  h3 {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: $fontColorPrimary;
+  }
+  h4 {
+    font-size: 13px;
+    font-weight: 400;
+    color: $fontColorSecondary;
+    margin-top: 30px;
+  }
+  h5 {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: #9fa7bb;
+    text-transform: uppercase;
+  }
+
+  &-select {
+    width: 170px;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+
+  &-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    line-height: 21px;
+    color: #516173;
+    margin-top: 10px;
+    input {
+      width: 170px;
+      height: 30px;
+      padding: 5px 8px;
+      border-radius: 3px;
+      border: solid 1px #e2e7ee;
+    }
+  }
+
+  &-other {
+    width: 300px;
+    border-radius: 3px;
+    line-height: 21px;
+    font-size: 13px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(49, 57, 67, 0.05);
+    border: solid 1px #e2e7ee;
+    background-color: #fff;
+    &-header {
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+      border-bottom: solid 1px #f1f4f8;
+      background-color: #f9fafb;
+      color: #242b39;
+      > * {
+        margin: 0 10px;
+      }
+    }
+    &-inner {
+      display: flex;
+      height: 40px;
+      justify-content: space-between;
+      margin: 0 10px;
+      color: #516173;
+      label {
+        margin: auto 0;
+      }
+      input {
+        width: 50px;
+        height: 30px;
+        margin: auto 0;
+      }
+    }
+  }
+}
+
+::ng-deep .mat-mdc-text-field-wrapper,
+::ng-deep .mat-mdc-form-field {
+  max-height: 30px;
+}
+
+::ng-deep .mat-mdc-form-field-infix {
+  padding: 2px !important;
+}
+
+.mat-divider {
+  margin: 15px 0;
+}

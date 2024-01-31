@@ -1,0 +1,36 @@
+<div class="dialog-tabs">
+    <h3>Tiles</h3>
+    <form class="example-form" #form="ngForm">
+        <h4>Display</h4>
+        <mat-form-field class="dialog-tabs-select" appearance="outline">
+            <mat-select [(ngModel)]="selectedValue" name="display" panelClass="dialog-tabs-option">
+                @for (display of displays; track display) {
+                <mat-option [value]="display.value">{{display.viewValue}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h5>Text</h5>
+        <div class="dialog-tabs-text">
+            <label>Title</label>
+            <input value="title">
+        </div>
+        <div class="dialog-tabs-text">
+            <label>Subtitle</label>
+            <input value="subtitle">
+        </div>
+        <mat-divider></mat-divider>
+        <h5>Other</h5>
+        <div class="dialog-tabs-other">
+            <div class="dialog-tabs-other-header">
+                <label>Load all</label>
+                <mat-slide-toggle></mat-slide-toggle>
+            </div>
+            <div class="dialog-tabs-other-inner">
+                <label>Tiles visible</label>
+                <input matInput>
+            </div>
+        </div>
+        <button type="submit">Update</button>
+    </form>
+</div>

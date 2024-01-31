@@ -1,0 +1,18 @@
+@use "./variables.scss" as *;
+
+.mat-mdc-mini-fab.mat-accent {
+  background-color: #2f3748;
+  color: white;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.btn-icon {
+  transform: scale(0.75);
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+}

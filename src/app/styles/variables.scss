@@ -1,13 +1,12 @@
 // Color variables
 $bgColor: #12355b;
-$bgColorDark: #0f2c4c;
-$fontColor: #dcc48e;
-$primaryColor: #a13d63;
-$secondaryColor: #2ebfa5;
+$fontColorPrimary: #2f3748;
+$fontColorSecondary: #516173;
+$primaryColor: #407cff;
 $black: #000000;
 $white: #ffffff;
 $grey: #c6c6c6;
-$shadow: rgba($fontColor, 0.25);
+$shadow: rgba($fontColorPrimary, 0.25);
 
 // Need refactor
 $color1: #6d6dff;
@@ -17,7 +16,7 @@ $color3: #507fff;
 // Font variables
 
 $fontPrimary: Poppins, sans-serif;
-$fontSecondary: "Cantarell", sans-serif;
+$fontSecondary: Inter, sans-serif;
 
 // Media querries
 $breakpoints: (
