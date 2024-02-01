@@ -1,0 +1,40 @@
+.dialog-inner-content {
+  margin: auto 10px;
+
+  header {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.table {
+  margin-top: 12px;
+  border-radius: 4px;
+  border: solid 1px #e2e7ee;
+  background-color: #f1f4f8;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  &-header {
+    display: grid;
+    grid-template-columns: 10% 10% 35% 35% 10%;
+    height: 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #516173;
+    font-weight: 500;
+    border-bottom: solid 1px #e2e7ee;
+
+    span {
+      margin: 9px 0;
+      &:nth-of-type(1) {
+        margin: 9px auto;
+      }
+    }
+  }
+  &-arrange-icon {
+    width: 16px;
+    height: 16px;
+    margin: 7px auto;
+  }
+}

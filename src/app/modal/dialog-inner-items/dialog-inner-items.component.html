@@ -1,0 +1,12 @@
+<div cdkDrag class="table-list-item">
+    <div class="table-list-item-drag-placeholder" *cdkDragPlaceholder></div>
+    <button mat-icon-button cdkDragHandle class="btn-close" style="margin: auto;" aria-label="Move tile">
+        <mat-icon svgIcon="move" class="icon-move"></mat-icon>
+    </button>
+    <input [value]="tile.bgColor" type="color" name="tile-background" id="">
+    <input [value]="tile.text" type="text" name="tile-text" id="tile-text">
+    <input [value]="tile.link" type="text" name="tile-link" id="tile-link">
+    <button mat-icon-button cdkDragHandle class="btn-close" style="margin: auto;" aria-label="Remove tile">
+        <mat-icon class="icon-remove" svgIcon="remove"></mat-icon>
+    </button>
+</div>

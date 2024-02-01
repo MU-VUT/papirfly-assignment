@@ -30,3 +30,23 @@ body {
 body {
   margin: 0;
 }
+
+h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: $fontColorPrimary;
+}
+h4 {
+  font-size: 13px;
+  font-weight: 400;
+  color: $fontColorSecondary;
+}
+h5 {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: #9fa7bb;
+  text-transform: uppercase;
+}

@@ -2,25 +2,9 @@
 @use "@angular/material" as mat;
 
 .dialog-tabs {
-  h3 {
-    font-size: 11px;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 1px;
-    color: $fontColorPrimary;
-  }
+  margin: 20px;
   h4 {
-    font-size: 13px;
-    font-weight: 400;
-    color: $fontColorSecondary;
     margin-top: 30px;
-  }
-  h5 {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.6px;
-    color: #9fa7bb;
-    text-transform: uppercase;
   }
 
   &-select {
@@ -46,11 +30,10 @@
   }
 
   &-other {
-    width: 300px;
     border-radius: 3px;
     line-height: 21px;
     font-size: 13px;
-    margin-top: 10px;
+    margin: 10px -10px 0 -10px;
     box-shadow: 0 4px 8px 0 rgba(49, 57, 67, 0.05);
     border: solid 1px #e2e7ee;
     background-color: #fff;
@@ -68,12 +51,20 @@
         margin: 0 10px;
       }
     }
+    &-container {
+      overflow: hidden;
+    }
     &-inner {
       display: flex;
       height: 40px;
       justify-content: space-between;
       margin: 0 10px;
       color: #516173;
+      margin-top: -30%;
+      transition: 0.3s;
+      &-closed {
+        margin-top: 0;
+      }
       label {
         margin: auto 0;
       }
@@ -81,10 +72,15 @@
         width: 50px;
         height: 30px;
         margin: auto 0;
+        padding: 5px 8px;
+        border-radius: 3px;
+        border: solid 1px #e2e7ee;
       }
     }
   }
 }
+
+// Custom mat select
 
 ::ng-deep .mat-mdc-text-field-wrapper,
 ::ng-deep .mat-mdc-form-field {
@@ -95,6 +91,30 @@
   padding: 2px !important;
 }
 
+// Custom mat divider
+
 .mat-divider {
   margin: 15px 0;
+}
+
+// Custom mat switch
+
+::ng-deep .mdc-switch {
+  --mdc-switch-track-height: 20px;
+  --mdc-switch-track-shape: calc(var(--mdc-switch-track-height) / 2);
+  --mdc-switch-handle-width: 16px;
+  --mdc-switch-handle-height: var(--mdc-switch-handle-width);
+  --mdc-switch-selected-handle-color: #fff;
+}
+
+::ng-deep .mdc-switch__handle {
+  left: 2px !important;
+}
+
+::ng-deep .mdc-switch .mdc-switch__handle-track {
+  width: calc(90% - var(--mdc-switch-handle-width)) !important;
+}
+
+::ng-deep .mat-expansion-panel {
+  --mat-expansion-header-disabled-state-text-color: #f9fafb;
 }

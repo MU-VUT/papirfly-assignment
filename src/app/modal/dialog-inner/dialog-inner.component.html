@@ -1,0 +1,23 @@
+<div class="dialog-inner-content">
+    <header>
+        <h4>Tiles</h4>
+        <button class="btn-add" mat-raised-button color="primary">
+            <mat-icon>add</mat-icon> Add</button>
+    </header>
+    <div class="table">
+        <div class="table-header">
+            <mat-icon class="table-arrange-icon" svgIcon="arrange"></mat-icon>
+            <span>Bg</span>
+            <span>Text</span>
+            <span>Link</span>
+            <span></span>
+
+        </div>
+        <div cdkDropList class="table-list" (cdkDropListDropped)="drop($event)">
+            @for (tile of tiles; track tile) {
+            <app-dialog-inner-items [tile]="tile"></app-dialog-inner-items>
+            }
+        </div>
+    </div>
+
+</div>
