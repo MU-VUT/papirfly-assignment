@@ -1,41 +1,64 @@
 {
+  "settings": {
+    "title": "Extra text",
+    "subtitle": "Get Inspired",
+    "otherLoadAll": true,
+    "tilesVisible": 11,
+    "selectedDisplay": "display-1",
+    "displays": [
+      {
+        "id": 1,
+        "value": "display-1",
+        "viewValue": "Display default"
+      },
+      {
+        "id": 2,
+        "value": "display-2",
+        "viewValue": "Display custom"
+      }
+    ]
+  },
   "tiles": [
     {
-      "id": 1,
+      "id": "1",
       "text": "Styles",
       "link": "https://www.seznam.cz",
       "bgColor": "#6d6dff"
     },
     {
-      "id": 2,
+      "id": "2",
       "text": "Print Templates",
       "link": "https://www.google.cz",
       "imageUrl": "rectangle-2.png"
     },
-    { "id": 3, "text": "Colors", "link": "https://www.seznam.cz" },
     {
-      "id": 4,
+      "id": "3",
+      "text": "Colors",
+      "link": "https://www.seznam.cz"
+    },
+    {
+      "id": "4",
       "text": "Photos",
       "link": "https://www.seznam.cz",
       "bgColor": "#9653fe",
       "imageUrl": "rectangle-3.png"
     },
     {
-      "id": 5,
+      "id": "5",
       "text": "Videos",
       "link": "https://www.seznam.cz",
       "bgColor": "#9653fe",
       "imageUrl": "rectangle-5.png"
     },
     {
-      "id": 6,
+      "id": "6",
       "text": "Shop",
       "link": "https://www.seznam.cz",
       "bgColor": "#507fff",
       "imageUrl": "rectangle-4.png"
     },
     {
-      "id": 7,
+      "id": "7",
       "text": "Item",
       "link": "https://www.seznam.cz",
       "bgColor": "#507fff",

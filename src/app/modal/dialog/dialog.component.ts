@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
-  MatDialog,
   MatDialogRef,
   MatDialogActions,
   MatDialogClose,
@@ -13,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { DialogTabsComponent } from '../dialog-tabs/dialog-tabs.component';
 import { DialogInnerComponent } from '../dialog-inner/dialog-inner.component';
 import { HttpClientModule } from '@angular/common/http';
+import Settings from '../../types/Settings';
+import { SettingsService } from '../../services/settings.service';
 
 @Component({
   selector: 'app-dialog',
@@ -32,6 +33,23 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
   ],
 })
-export class DialogComponent {
-  constructor(public dialogRef: MatDialogRef<DialogComponent>) {}
+export class DialogComponent implements OnInit {
+  constructor(
+    public dialogRef: MatDialogRef<DialogComponent>,
+    private settingsService: SettingsService
+  ) {}
+  submitted: boolean = false;
+  settings: Settings;
+
+  onSubmit() {
+    this.submitted = true;
+    this.settingsService.updateSettings(this.settings).subscribe();
+    this.dialogRef.close();
+  }
+
+  ngOnInit(): void {
+    this.settingsService
+      .getSettings()
+      .subscribe((settings) => (this.settings = settings));
+  }
 }

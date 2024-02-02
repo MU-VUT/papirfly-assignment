@@ -1,5 +1,5 @@
 <div class="grid">
-    <app-tiles-item class="grid-item" [ngClass]="{'grid-item-half': this.display == 2}"
+    <app-tiles-item class="grid-item" [ngClass]="{'grid-item-half': this.settings.selectedDisplay == 'display-2'}"
         *ngFor="let tile of tiles; let index = index" [tile]="tile">
     </app-tiles-item>
 </div>

@@ -1,8 +1,8 @@
 <section class="container">
   <header>
-    <h1 class="title">{{title}}</h1>
-    <h2 class="subtitle">{{subtitle}}</h2>
+    <h1 class="title">{{settings.title}}</h1>
+    <h2 class="subtitle">{{settings.subtitle}}</h2>
   </header>
-  <app-tiles></app-tiles>
-  <app-modal class="btn-center"></app-modal>
+  <app-tiles [settings]="settings" [tiles]="tiles"></app-tiles>
+  <app-modal class="btn-center" (updatedChild)="onUpdate()"></app-modal>
 </section>

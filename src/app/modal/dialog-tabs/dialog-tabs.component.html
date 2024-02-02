@@ -2,8 +2,8 @@
     <h3>Tiles</h3>
     <h4>Display</h4>
     <mat-form-field class="dialog-tabs-select" appearance="outline">
-        <mat-select [(ngModel)]="selectedValue" name="display" panelClass="dialog-tabs-option">
-            @for (display of displays; track display) {
+        <mat-select [(ngModel)]="settings.selectedDisplay" name="display" panelClass="dialog-tabs-option">
+            @for (display of settings.displays; track display) {
             <mat-option [value]="display.value">{{display.viewValue}}</mat-option>
             }
         </mat-select>
@@ -11,24 +11,24 @@
     <mat-divider></mat-divider>
     <h5>Text</h5>
     <div class="dialog-tabs-text">
-        <label>Title</label>
-        <input name="title" type="text" value="title">
+        <label for="title">Title</label>
+        <input name="title" id="title" type="text" [(ngModel)]="settings.title">
     </div>
     <div class="dialog-tabs-text">
-        <label>Subtitle</label>
-        <input name="subtitle" type="text" value="subtitle">
+        <label for="subtitle">Subtitle</label>
+        <input name="subtitle" id="subtitle" type="text" [(ngModel)]="settings.subtitle">
     </div>
     <mat-divider></mat-divider>
     <h5>Other</h5>
     <div class="dialog-tabs-other">
         <div class="dialog-tabs-other-header">
             <label>Load all</label>
-            <mat-slide-toggle [(ngModel)]="loadAllChecked" hideIcon="true" color="primary"></mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]="settings.otherLoadAll" hideIcon="true" color="primary"></mat-slide-toggle>
         </div>
         <div class="dialog-tabs-other-container">
-            <div class="dialog-tabs-other-inner" [ngClass]="{'dialog-tabs-other-inner-closed': this.loadAllChecked}">
+            <div class="dialog-tabs-other-inner" [ngClass]="{'dialog-tabs-other-inner-closed': settings.otherLoadAll}">
                 <label>Tiles visible</label>
-                <input name="tiles-visible" type="number" min="1" value="20">
+                <input name="tiles-visible" type="number" min="1" [(ngModel)]="settings.tilesVisible">
             </div>
         </div>
     </div>

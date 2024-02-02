@@ -1,8 +1,9 @@
-<form class="dialog" #form="ngForm">
+<form class="dialog" (ngSubmit)="onSubmit()" #form="ngForm">
 
-    <app-dialog-tabs style="grid-area: a; border-bottom: solid 1px #e2e7ee;"></app-dialog-tabs>
+    <app-dialog-tabs [settings]="settings" style="grid-area: a; border-bottom: solid 1px #e2e7ee;"></app-dialog-tabs>
     <div mat-dialog-actions class="mat-dialog-actions" style="grid-area: b;">
-        <button class="btn btn-update" mat-raised-button mat-dialog-close color="primary" type="submit">Update</button>
+        <button [disabled]="!form.form.valid" class="btn btn-update" mat-raised-button color="primary"
+            type="submit">Update</button>
     </div>
     <div class="dialog-inner" style="grid-area: c;">
         <div mat-dialog-actions class="dialog-inner-top">
