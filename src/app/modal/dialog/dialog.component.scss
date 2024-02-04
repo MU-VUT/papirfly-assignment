@@ -3,12 +3,21 @@
 .dialog {
   display: grid;
   grid-template-areas:
-    "a c c"
-    "a c c"
-    "b c c";
-  grid-template-columns: 320px 1fr;
+    "a"
+    "c"
+    "b";
+  justify-content: center;
   font-family: $fontSecondary;
   font-weight: 400;
+  overflow-x: hidden;
+  padding: 0;
+  @include mqmin(large) {
+    grid-template-areas:
+      "a c c"
+      "a c c"
+      "b c c";
+    grid-template-columns: 320px 1fr;
+  }
 }
 
 .mat-dialog-actions {
@@ -17,13 +26,19 @@
 }
 
 .dialog-inner {
-  border-left: solid 1px #e2e7ee;
+  border: solid 1px #e2e7ee;
   background-color: #f9fafb;
   padding: 10px;
   &-top {
     justify-content: end;
     padding: 0;
     min-height: 16px;
+    @include mqmax(large) {
+      display: none;
+    }
+  }
+  @include mqmin(large) {
+    border-left: solid 1px #e2e7ee;
   }
 }
 

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatButton } from '@angular/material/button';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import {
   CdkDragDrop,
@@ -9,8 +9,8 @@ import {
   moveItemInArray,
   CdkDragHandle,
 } from '@angular/cdk/drag-drop';
-
-import { DialogInnerItemsComponent } from '../dialog-inner-items/dialog-inner-items.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { Tile } from '../../types/Tile';
 import { TileService } from '../../services/tile.service';
@@ -21,17 +21,20 @@ import { TileService } from '../../services/tile.service';
   styleUrl: './dialog-inner.component.scss',
   standalone: true,
   imports: [
-    MatButton,
+    MatButtonModule,
     MatIcon,
     CdkDropList,
     CdkDrag,
-    DialogInnerItemsComponent,
     CdkDragPlaceholder,
     CdkDragHandle,
+    FormsModule,
+    CommonModule,
   ],
 })
-export class DialogInnerComponent implements OnInit {
-  tiles: Tile[] = [];
+export class DialogInnerComponent {
+  @Input() tiles: Tile[];
+  @Output() onDeletedItems: EventEmitter<Tile> = new EventEmitter();
+  @Output() onAddedItems: EventEmitter<Tile> = new EventEmitter();
 
   constructor(private tileService: TileService) {}
 
@@ -39,7 +42,19 @@ export class DialogInnerComponent implements OnInit {
     moveItemInArray(this.tiles, event.previousIndex, event.currentIndex);
   }
 
-  ngOnInit(): void {
-    this.tileService.getTiles().subscribe((tiles) => (this.tiles = tiles));
+  addTile() {
+    const newTile: Tile = {
+      id: Math.random().toString(16).slice(2).toString(),
+      text: '',
+      link: '',
+      bgColor: '#12355b',
+    };
+    this.onAddedItems.emit(newTile);
+    this.tiles.push(newTile);
+  }
+
+  removeTile(tile: Tile) {
+    this.onDeletedItems.emit(tile);
+    this.tiles = this.tiles.filter((e) => e.id !== tile.id);
   }
 }

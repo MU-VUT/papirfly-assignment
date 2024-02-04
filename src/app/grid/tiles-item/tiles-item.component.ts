@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Tile } from '../../types/Tile';
 
 @Component({
@@ -6,10 +6,13 @@ import { Tile } from '../../types/Tile';
   templateUrl: './tiles-item.component.html',
   styleUrl: './tiles-item.component.scss',
 })
-export class TilesItemComponent {
+export class TilesItemComponent implements OnInit {
   @Input() tile: Tile;
+  tileLink: string;
 
-  openLink() {
-    window.open(this.tile.link, '_blank');
+  ngOnInit(): void {
+    this.tileLink = this.tile.link.includes('https://')
+      ? this.tile.link
+      : `https://${this.tile.link}`;
   }
 }

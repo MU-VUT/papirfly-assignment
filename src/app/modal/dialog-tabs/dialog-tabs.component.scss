@@ -2,9 +2,23 @@
 @use "@angular/material" as mat;
 
 .dialog-tabs {
-  margin: 20px;
+  @include mqmin(large) {
+    margin: 20px;
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-close {
+      @include mqmin(large) {
+        display: none;
+      }
+    }
+  }
   h4 {
-    margin-top: 30px;
+    @include mqmin(large) {
+      margin-top: 30px;
+    }
   }
 
   &-select {
@@ -118,4 +132,12 @@
 
 ::ng-deep .mat-expansion-panel {
   --mat-expansion-header-disabled-state-text-color: #f9fafb;
+}
+
+// Input validation
+.ng-invalid {
+  border: solid 2px red !important;
+}
+::placeholder {
+  color: red !important;
 }

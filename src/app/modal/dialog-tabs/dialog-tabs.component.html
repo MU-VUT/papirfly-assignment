@@ -1,5 +1,12 @@
 <div class="dialog-tabs">
-    <h3>Tiles</h3>
+    <div class="dialog-tabs-header">
+        <h3>Tiles</h3>
+        <div mat-dialog-actions class="dialog-tabs-header-close">
+            <button class="btn-close" type="button" mat-icon-button mat-dialog-close="true" aria-label="Close settings">
+                <mat-icon svgIcon="close-btn" class="icon-close"></mat-icon>
+            </button>
+        </div>
+    </div>
     <h4>Display</h4>
     <mat-form-field class="dialog-tabs-select" appearance="outline">
         <mat-select [(ngModel)]="settings.selectedDisplay" name="display" panelClass="dialog-tabs-option">
@@ -12,23 +19,26 @@
     <h5>Text</h5>
     <div class="dialog-tabs-text">
         <label for="title">Title</label>
-        <input name="title" id="title" type="text" [(ngModel)]="settings.title">
+        <input required name="title" id="title" type="text" [(ngModel)]="settings.title" minlength="1"
+            placeholder="Title required!">
     </div>
     <div class="dialog-tabs-text">
         <label for="subtitle">Subtitle</label>
-        <input name="subtitle" id="subtitle" type="text" [(ngModel)]="settings.subtitle">
+        <input required name="subtitle" id="subtitle" type="text" [(ngModel)]="settings.subtitle" minlength="1"
+            placeholder="Subtitle required!">
     </div>
     <mat-divider></mat-divider>
     <h5>Other</h5>
     <div class="dialog-tabs-other">
         <div class="dialog-tabs-other-header">
             <label>Load all</label>
-            <mat-slide-toggle [(ngModel)]="settings.otherLoadAll" hideIcon="true" color="primary"></mat-slide-toggle>
+            <mat-slide-toggle name="display-all" [(ngModel)]="settings.otherLoadAll" hideIcon="true"
+                color="primary"></mat-slide-toggle>
         </div>
         <div class="dialog-tabs-other-container">
             <div class="dialog-tabs-other-inner" [ngClass]="{'dialog-tabs-other-inner-closed': settings.otherLoadAll}">
                 <label>Tiles visible</label>
-                <input name="tiles-visible" type="number" min="1" [(ngModel)]="settings.tilesVisible">
+                <input name="tiles-visible" type="number" min="0" [(ngModel)]="settings.tilesVisible">
             </div>
         </div>
     </div>

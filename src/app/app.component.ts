@@ -6,13 +6,33 @@ import { SettingsService } from './services/settings.service';
 import { TileService } from './services/tile.service';
 import { Tile } from './types/Tile';
 
+const defaultSettings: Settings = {
+  title: 'extra text',
+  subtitle: 'Get Inspired',
+  otherLoadAll: true,
+  tilesVisible: 18,
+  selectedDisplay: 'display-1',
+  displays: [
+    {
+      id: 1,
+      value: 'display-1',
+      viewValue: 'Display default',
+    },
+    {
+      id: 2,
+      value: 'display-2',
+      viewValue: 'Display custom',
+    },
+  ],
+};
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  settings: Settings;
+  settings: Settings = defaultSettings;
   tiles: Tile[];
 
   constructor(

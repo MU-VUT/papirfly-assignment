@@ -1,16 +1,17 @@
-<form class="dialog" (ngSubmit)="onSubmit()" #form="ngForm">
-
-    <app-dialog-tabs [settings]="settings" style="grid-area: a; border-bottom: solid 1px #e2e7ee;"></app-dialog-tabs>
+<form mat-dialog-content class="dialog" (ngSubmit)="onSubmit()" #form="ngForm">
+    <app-dialog-tabs [form]="form" [settings]="settings"
+        style="grid-area: a; border-bottom: solid 1px #e2e7ee;"></app-dialog-tabs>
     <div mat-dialog-actions class="mat-dialog-actions" style="grid-area: b;">
-        <button [disabled]="!form.form.valid" class="btn btn-update" mat-raised-button color="primary"
+        <button [disabled]="form.invalid" class="btn btn-update" mat-raised-button color="primary"
             type="submit">Update</button>
     </div>
     <div class="dialog-inner" style="grid-area: c;">
         <div mat-dialog-actions class="dialog-inner-top">
-            <button class="btn-close" mat-icon-button mat-dialog-close aria-label="Close settings">
-                <mat-icon svgIcon="close-btn" class="icon-close"></mat-icon>
+            <button class="btn-close" type="button" mat-icon-button mat-dialog-close="true" aria-label="Close settings">
+                <mat-icon class="icon-close">close</mat-icon>
             </button>
         </div>
-        <app-dialog-inner></app-dialog-inner>
+        <app-dialog-inner [tiles]="tiles" (onDeletedItems)="deleteItems($event)" (onAddedItems)="
+            addItems($event)"></app-dialog-inner>
     </div>
 </form>

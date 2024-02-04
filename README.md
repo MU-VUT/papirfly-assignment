@@ -28,20 +28,20 @@ https://app.zeplin.io/project/5abcb99f6ae5e3121e2eec13/screen/601bf9f8a886787d02
 
 ### Hlavní požadavky
 
-- Nakódovat komponentu dle designu 1:1, ted dlaždice, které jsou jako linky a
+- [Check] Nakódovat komponentu dle designu 1:1, ted dlaždice, které jsou jako linky a
   nastavení, které je skryto a otevírá se jako dialogové okno (modal)
 - [Check] Použít jakýkoliv preprocesor pro kompilaci stylů z SASS/SCSS do CSS
 - [Check] Responsivní chování dlaždic (ne nastavení – modal) v rozmezí 320px až 1920px
   šířky obrazovky
-- Po kliknutí na „Update“ v nastavení odeslat aktuálně nastavená data pomocí POST
+- [Check] Po kliknutí na „Update“ v nastavení odeslat aktuálně nastavená data pomocí POST
   requestu (může být i na neexistující adresu, není potřeba response).
 
 ### Volitelný úkol
 
 - [Check] Při načtení stránky dynamicky načíst dlaždice např. dle JSONu a GET requestu na
   něj
-- Reflektovat aspoň některá nastavení ve view ( v dlaždicích ), jako třeba text, link,
+- [Check] Reflektovat aspoň některá nastavení ve view ( v dlaždicích ), jako třeba text, link,
   title, subtitle, barvu pozadí, atd…
-- Responsivní chování modalu nastavení
-- Jednoduché animace (reveal, on hover, text, atd..)
-- Drag and drop přesouvání pozice dlaždic v nastavení
+- [Check] Responsivní chování modalu nastavení
+- [Check] Jednoduché animace (reveal, on hover, text, atd..)
+- [Check] Drag and drop přesouvání pozice dlaždic v nastavení

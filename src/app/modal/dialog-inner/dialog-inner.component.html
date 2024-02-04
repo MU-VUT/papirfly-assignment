@@ -1,22 +1,36 @@
 <div class="dialog-inner-content">
     <header>
         <h4>Tiles</h4>
-        <button class="btn-add" mat-raised-button color="primary">
+        <button (click)="addTile()" type="button" class="btn-add" mat-raised-button color="primary">
             <mat-icon>add</mat-icon> Add</button>
     </header>
     <div class="table">
         <div class="table-header">
             <mat-icon class="table-arrange-icon" svgIcon="arrange"></mat-icon>
             <span>Bg</span>
-            <span>Text</span>
-            <span>Link</span>
-            <span></span>
-
+            <span style="margin-left: 10px;" class="table-list-item-input">Text</span>
+            <span style="margin-left: 10px;" class="table-list-item-input">Link</span>
+            <span class="table-list-item-remove"></span>
         </div>
         <div cdkDropList class="table-list" (cdkDropListDropped)="drop($event)">
-            @for (tile of tiles; track tile) {
-            <app-dialog-inner-items [tile]="tile"></app-dialog-inner-items>
-            }
+            <div *ngFor="let tile of tiles" cdkDrag class="table-list-item">
+                <div class="table-list-item-drag-placeholder" *cdkDragPlaceholder></div>
+                <button mat-icon-button cdkDragHandle type="button" class="btn-close table-list-item-handle"
+                    style="margin: auto;" aria-label="Move tile">
+                    <mat-icon svgIcon="move" class="icon-move"></mat-icon>
+                </button>
+                <input [(ngModel)]="tile.bgColor" type="color" name="tile-background-{{tile.id}}"
+                    id="tile-background-{{tile.id}}" class="table-list-item-bg">
+                <input [(ngModel)]="tile.text" type="text" name="tile-text-{{tile.id}}" id="tile-text-{{tile.id}}"
+                    class="table-list-item-input">
+                <input [(ngModel)]="tile.link" type="text" name="tile-link-{{tile.id}}" id="tile-link-{{tile.id}}"
+                    class="table-list-item-input">
+                <button (click)="removeTile(tile)" mat-icon-button class="btn-close table-list-item-remove"
+                    type="button" style="margin: auto;" aria-label="Remove tile">
+                    <mat-icon class="icon-remove" svgIcon="remove"></mat-icon>
+                </button>
+            </div>
+
         </div>
     </div>
 

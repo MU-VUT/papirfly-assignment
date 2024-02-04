@@ -1,5 +1,5 @@
 export interface Tile {
-  id: number;
+  id: string;
   text: string;
   bgColor?: string;
   imageUrl?: string;
