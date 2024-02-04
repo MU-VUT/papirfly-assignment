@@ -15,7 +15,7 @@
 .table {
   margin-top: 12px;
   border-radius: 4px;
-  border: solid 1px #e2e7ee;
+  border: $border;
   background-color: #f1f4f8;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   &-header {
@@ -28,9 +28,9 @@
       font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.6px;
-      color: #516173;
+      color: $fontColorSecondary;
       font-weight: 500;
-      border-bottom: solid 1px #e2e7ee;
+      border-bottom: $border;
     }
 
     span {
@@ -74,22 +74,22 @@
   > * {
     margin: auto 0;
   }
+
+  input[type="text"],
+  input[type="color"] {
+    border-radius: 3px;
+    border: $border;
+    font-family: $fontSecondary;
+    font-size: 13px;
+  }
   input[type="text"] {
     max-width: 220px;
     height: 30px;
     padding: 5px 8px;
-    border-radius: 3px;
-    border: solid 1px #e2e7ee;
-    font-family: $fontSecondary;
-    font-size: 13px;
   }
   input[type="color"] {
     max-width: 30px;
     margin: auto;
-    border-radius: 3px;
-    border: solid 1px #e2e7ee;
-    font-family: $fontSecondary;
-    font-size: 13px;
   }
 
   .icon-move {
@@ -99,7 +99,6 @@
   }
   .icon-remove {
     margin: auto;
-
     width: 16px;
     height: 17px;
   }

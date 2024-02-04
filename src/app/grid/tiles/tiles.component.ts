@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
+
 import Settings from '../../types/Settings';
-import { Tile } from '../../types/Tile';
+import Tile from '../../types/Tile';
 
 @Component({
   selector: 'app-tiles',

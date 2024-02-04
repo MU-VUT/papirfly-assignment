@@ -1,4 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import {
@@ -9,11 +12,8 @@ import {
   moveItemInArray,
   CdkDragHandle,
 } from '@angular/cdk/drag-drop';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 
-import { Tile } from '../../types/Tile';
-import { TileService } from '../../services/tile.service';
+import Tile from '../../types/Tile';
 
 @Component({
   selector: 'app-dialog-inner',
@@ -35,8 +35,6 @@ export class DialogInnerComponent {
   @Input() tiles: Tile[];
   @Output() onDeletedItems: EventEmitter<Tile> = new EventEmitter();
   @Output() onAddedItems: EventEmitter<Tile> = new EventEmitter();
-
-  constructor(private tileService: TileService) {}
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.tiles, event.previousIndex, event.currentIndex);

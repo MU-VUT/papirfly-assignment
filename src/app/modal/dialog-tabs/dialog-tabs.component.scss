@@ -32,14 +32,14 @@
     justify-content: space-between;
     font-size: 13px;
     line-height: 21px;
-    color: #516173;
+    color: $fontColorSecondary;
     margin-top: 10px;
     input {
       width: 170px;
       height: 30px;
       padding: 5px 8px;
       border-radius: 3px;
-      border: solid 1px #e2e7ee;
+      border: $border;
       font-family: $fontSecondary;
     }
   }
@@ -50,7 +50,7 @@
     font-size: 13px;
     margin: 10px -10px 0 -10px;
     box-shadow: 0 4px 8px 0 rgba(49, 57, 67, 0.05);
-    border: solid 1px #e2e7ee;
+    border: $border;
     background-color: #fff;
     &-header {
       height: 40px;
@@ -74,7 +74,7 @@
       height: 40px;
       justify-content: space-between;
       margin: 0 10px;
-      color: #516173;
+      color: $fontColorSecondary;
       margin-top: -30%;
       transition: 0.3s;
       &-closed {
@@ -89,7 +89,7 @@
         margin: auto 0;
         padding: 5px 8px;
         border-radius: 3px;
-        border: solid 1px #e2e7ee;
+        border: $border;
       }
     }
   }

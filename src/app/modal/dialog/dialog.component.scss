@@ -26,7 +26,7 @@
 }
 
 .dialog-inner {
-  border: solid 1px #e2e7ee;
+  border: $border;
   background-color: #f9fafb;
   padding: 10px;
   &-top {
@@ -38,7 +38,7 @@
     }
   }
   @include mqmin(large) {
-    border-left: solid 1px #e2e7ee;
+    border-left: $border;
   }
 }
 

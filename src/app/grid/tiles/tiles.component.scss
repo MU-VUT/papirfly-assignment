@@ -5,7 +5,7 @@
   grid-template-columns: repeat(12, 1fr);
 }
 
-// Default display grid
+// Display 3 tiles - 33/33/33
 .grid-item {
   aspect-ratio: 2 / 1;
   grid-column: span 12;
@@ -22,7 +22,7 @@
   }
 }
 
-// Custom display grid
+// Display 3 tiles - 25/25/50
 // For reusability @function/@mixin can be used
 .grid-item-half {
   @include mqmin(large) {

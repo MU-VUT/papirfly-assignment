@@ -1,5 +1,4 @@
 import Display from './Display';
-import { Tile } from './Tile';
 
 export default interface Settings {
   title: string;

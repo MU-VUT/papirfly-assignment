@@ -4,7 +4,7 @@
     "subtitle": "Get Inspired",
     "otherLoadAll": true,
     "tilesVisible": 17,
-    "selectedDisplay": "display-2",
+    "selectedDisplay": "display-1",
     "displays": [
       {
         "id": 1,
@@ -60,7 +60,7 @@
     },
     {
       "id": "8a4d0e9fa5601",
-      "text": "",
+      "text": "asd",
       "link": "",
       "bgColor": "#fbff14"
     }

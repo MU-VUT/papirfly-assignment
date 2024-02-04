@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Tile } from '../../types/Tile';
+
+import Tile from '../../types/Tile';
 
 @Component({
   selector: 'app-tiles-item',
@@ -11,6 +12,7 @@ export class TilesItemComponent implements OnInit {
   tileLink: string;
 
   ngOnInit(): void {
+    // Link validation for external usage
     this.tileLink = this.tile.link.includes('https://')
       ? this.tile.link
       : `https://${this.tile.link}`;

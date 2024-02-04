@@ -1,21 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import {
   MatDialogRef,
   MatDialogActions,
   MatDialogClose,
-  MatDialogTitle,
   MatDialogContent,
 } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
-import { DialogTabsComponent } from '../dialog-tabs/dialog-tabs.component';
-import { DialogInnerComponent } from '../dialog-inner/dialog-inner.component';
-import { HttpClientModule } from '@angular/common/http';
-import Settings from '../../types/Settings';
+
 import { SettingsService } from '../../services/settings.service';
 import { TileService } from '../../services/tile.service';
-import { Tile } from '../../types/Tile';
+
+import Settings from '../../types/Settings';
+import Tile from '../../types/Tile';
+
+import { DialogTabsComponent } from '../dialog-tabs/dialog-tabs.component';
+import { DialogInnerComponent } from '../dialog-inner/dialog-inner.component';
 
 const defaultSettings: Settings = {
   title: 'extra text',
@@ -27,12 +30,12 @@ const defaultSettings: Settings = {
     {
       id: 1,
       value: 'display-1',
-      viewValue: 'Display default',
+      viewValue: '3 tiles 33/33/33',
     },
     {
       id: 2,
       value: 'display-2',
-      viewValue: 'Display custom',
+      viewValue: '3 tiles 25/25/50',
     },
   ],
 };
@@ -46,7 +49,6 @@ const defaultSettings: Settings = {
     MatButtonModule,
     MatDialogActions,
     MatDialogClose,
-    MatDialogTitle,
     MatDialogContent,
     DialogTabsComponent,
     FormsModule,
@@ -61,7 +63,6 @@ export class DialogComponent implements OnInit {
     private settingsService: SettingsService,
     private tilesService: TileService
   ) {}
-  submitted: boolean = false;
   settings: Settings = defaultSettings;
   tiles: Tile[] = [];
 
@@ -77,7 +78,6 @@ export class DialogComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submitted = true;
     this.settingsService.updateSettings(this.settings).subscribe();
 
     // Updating all tiles, one tile at a time (multiple requests)

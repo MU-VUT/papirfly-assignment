@@ -1,4 +1,4 @@
-export interface Tile {
+export default interface Tile {
   id: string;
   text: string;
   bgColor?: string;

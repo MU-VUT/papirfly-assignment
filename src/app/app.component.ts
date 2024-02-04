@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import Settings from './types/Settings';
+
 import { SettingsService } from './services/settings.service';
 import { TileService } from './services/tile.service';
-import { Tile } from './types/Tile';
+
+import { MatIconRegistry } from '@angular/material/icon';
+
+import Settings from './types/Settings';
+import Tile from './types/Tile';
 
 const defaultSettings: Settings = {
   title: 'extra text',
@@ -16,12 +19,12 @@ const defaultSettings: Settings = {
     {
       id: 1,
       value: 'display-1',
-      viewValue: 'Display default',
+      viewValue: '3 tiles 33/33/33',
     },
     {
       id: 2,
       value: 'display-2',
-      viewValue: 'Display custom',
+      viewValue: '3 tiles 25/25/50',
     },
   ],
 };
