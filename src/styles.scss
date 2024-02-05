@@ -1,6 +1,9 @@
 @use "./app/styles/variables.scss" as *;
 @use "./app/styles/buttons.scss" as *;
 
+@import "@fontsource/poppins";
+@import "@fontsource/inter";
+
 // Global styles
 * {
   margin: 0;

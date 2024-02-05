@@ -87,6 +87,7 @@ export class DialogComponent implements OnInit {
       this.tilesService.addTile(addedTile).subscribe();
     }
 
+    // Not ideal, should change value of order & display tiles by that order
     for (let i = 0; i < this.tiles.length; i++) {
       this.tilesService.deleteTile(this.tiles[i]).subscribe();
       this.tilesService.addTile(this.tiles[i]).subscribe();
