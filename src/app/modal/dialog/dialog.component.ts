@@ -87,8 +87,9 @@ export class DialogComponent implements OnInit {
       this.tilesService.addTile(addedTile).subscribe();
     }
 
-    for (const tile of this.tiles) {
-      this.tilesService.updateTile(tile).subscribe();
+    for (let i = 0; i < this.tiles.length; i++) {
+      this.tilesService.deleteTile(this.tiles[i]).subscribe();
+      this.tilesService.addTile(this.tiles[i]).subscribe();
     }
 
     for (const deletedTile of this.deletedItems) {
