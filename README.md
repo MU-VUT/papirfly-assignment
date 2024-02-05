@@ -16,9 +16,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Setup
 
-0. [Node.JS and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) must be installed. Version 8.5.0 or later.
-1. Run `npm run start` for a local DB and dev server.
-2. App will automaticly open in new broswer window.
+0. [Node.JS and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) must be installed. Version 18.13 or later.
+1. Run `npm i -D concurrently` for Concurrently package devDependecies.
+2. Run `npm run start` for a local DB and dev server.
+3. App will automaticly open in new browser window.
 
 ### Local DB server
 
