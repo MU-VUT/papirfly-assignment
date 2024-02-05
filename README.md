@@ -1,28 +1,35 @@
 # Papirfly FrontEnd Assignment
 
+Simple adaptive Angular app for Papirfly FrontEnd Assignment.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
-## Development server
+## Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+0. [Node.JS and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) must be installed. Version 8.5.0 or later.
+1. Run `npm run start` for a local DB and dev server.
+2. App will automaticly open in new broswer window.
 
-## Local server
+### Local DB server
 
-This app needs Local server (json-server) running for all features. Run `npm run server` for server start. Local server runs on `http://localhost:3000/`.
+This app needs Local DB server (json-server) running for all features. Local server runs on `http://localhost:3000/`. Server can be run separately using `npm run server`.
 
-## Build
+### Development server
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Dev server can be run separately using `ng serve`. Navigate to `http://localhost:4200/`.
 
-## Running unit tests
+## Features
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Responsive Tiles grid view and modal Settings panel.
+- Tiles & Settings connected to the local database.
+- Tiles build with custom HTML/SCSS.
+- Settings build with Angular Material library.
+- Custom color theme for better reusability of components.
+- Simple partial user input form validation.
 
 ## Assignment
+
+### UI design
 
 https://app.zeplin.io/project/5abcb99f6ae5e3121e2eec13/screen/601bf9f8a886787d02d3fffe
 
@@ -45,3 +52,11 @@ https://app.zeplin.io/project/5abcb99f6ae5e3121e2eec13/screen/601bf9f8a886787d02
 - [Check] Responsivní chování modalu nastavení
 - [Check] Jednoduché animace (reveal, on hover, text, atd..)
 - [Check] Drag and drop přesouvání pozice dlaždic v nastavení
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.

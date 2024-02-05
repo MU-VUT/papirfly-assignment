@@ -4,7 +4,7 @@
     "subtitle": "Get Inspired",
     "otherLoadAll": true,
     "tilesVisible": 17,
-    "selectedDisplay": "display-1",
+    "selectedDisplay": "display-2",
     "displays": [
       {
         "id": 1,
@@ -21,7 +21,7 @@
   "tiles": [
     {
       "id": "1",
-      "text": "Style",
+      "text": "Styles",
       "link": "www.seznam.cz",
       "bgColor": "#ff0000"
     },
@@ -57,12 +57,6 @@
       "link": "https://www.seznam.cz",
       "bgColor": "#507fff",
       "imageUrl": "rectangle-1.png"
-    },
-    {
-      "id": "8a4d0e9fa5601",
-      "text": "asd",
-      "link": "",
-      "bgColor": "#fbff14"
     }
   ]
 }
