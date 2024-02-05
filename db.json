@@ -3,8 +3,8 @@
     "title": "extra text",
     "subtitle": "Get Inspired",
     "otherLoadAll": true,
-    "tilesVisible": 17,
-    "selectedDisplay": "display-2",
+    "tilesVisible": 10,
+    "selectedDisplay": "display-1",
     "displays": [
       {
         "id": 1,
@@ -23,7 +23,7 @@
       "id": "1",
       "text": "Styles",
       "link": "www.seznam.cz",
-      "bgColor": "#ff0000"
+      "bgColor": "#6d6dff"
     },
     {
       "id": "2",
@@ -52,11 +52,11 @@
       "imageUrl": "rectangle-5.png"
     },
     {
-      "id": "7",
-      "text": "Item",
+      "id": "6",
+      "text": "Shop",
       "link": "https://www.seznam.cz",
       "bgColor": "#507fff",
-      "imageUrl": "rectangle-1.png"
+      "imageUrl": "rectangle-4.png"
     }
   ]
 }
