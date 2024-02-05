@@ -40,10 +40,6 @@ Dev server can be run separately using `ng serve`. Navigate to `http://localhost
 
 ## Assignment
 
-### UI design
-
-https://app.zeplin.io/project/5abcb99f6ae5e3121e2eec13/screen/601bf9f8a886787d02d3fffe
-
 ### Hlavní požadavky
 
 - [<span style="color:limegreen">Check</span>] Nakódovat komponentu dle designu 1:1, ted dlaždice, které jsou jako linky a
